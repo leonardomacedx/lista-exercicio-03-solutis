@@ -2,6 +2,7 @@ package main.java.leonardo.questao26;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
@@ -16,8 +17,8 @@ public class Main {
         System.out.println("Informe o segundo horário (hh:mm:ss):");
         String horario2 = scanner.nextLine();
 
-        LocalDateTime horarioFmt1 = LocalDateTime.parse(horario1, fmt);
-        LocalDateTime horarioFmt2 = LocalDateTime.parse(horario2, fmt);
+        LocalTime horarioFmt1 = LocalTime.parse(horario1, fmt);
+        LocalTime horarioFmt2 = LocalTime.parse(horario2, fmt);
 
 
         Duration duracao = Duration.between(horarioFmt1, horarioFmt2);
