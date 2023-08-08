@@ -2,7 +2,7 @@
 
 * Questões resolvidas:
 
-Alisson: 
+Alisson:
 
 Elio:
 
@@ -10,4 +10,4 @@ Leonardo:
 
 Victor:
 
-Cainan:
+Cainan: 6, 28, 30, 34, 39, 42, 44, 45, 47, 49, 58, 62, 65;
