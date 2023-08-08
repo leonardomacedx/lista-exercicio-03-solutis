@@ -7,17 +7,18 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        Patient patient = new Patient();
+        Patient patient;
         List<Patient> listaPatients = new ArrayList<>();
 
+        System.out.println("Digite as informaçoes do paciente, digite fim, no lugar do nome quando desejar finalizar o programa!");
+        printExample();
+
         do {
-            System.out.println("Digite as informaçoes do paciente, digite fim, no lugar do nome quando desejar finalizar o programa!");
-            printExample();
             patient = new Patient();
             patient.setName(input.next());
             if (patient.getName().equals("fim")) break;
 
-            patient.setSexo(input.next());
+            patient.setSexo(input.next().toUpperCase());
             patient.setPeso(input.nextFloat());
             patient.setAltura(input.nextFloat());
             patient.setIdade(input.nextInt());
@@ -25,9 +26,8 @@ public class Main {
             listaPatients.add(patient);
 
         } while (!patient.getName().equals("fim"));
-        //printList(listaPatients);
-        printRelatorio(listaPatients);
 
+        printRelatorio(listaPatients);
     }
 
     public static void printList(List<Patient> a){
@@ -49,7 +49,7 @@ public class Main {
         System.out.println("Mulheres entre 1,60 e 1,70 e acima de 70kg: " + countFemaleWithHeightWeight(a));
         System.out.println("Número de pessoas entre 18 e 25 anos: " + patientsInRange(a));
         System.out.println("Nome do paciente mais velho: " + olderPatient(a));
-        System.out.println("Nome da mulher mais baixa: " + shorterFemalePatient(a));;
+        System.out.println("Nome da mulher mais baixa: " + shorterFemalePatient(a));
         System.out.println("-----------------------------");
     }
 
